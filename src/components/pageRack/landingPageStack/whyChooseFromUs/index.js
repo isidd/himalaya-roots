@@ -36,7 +36,7 @@ export default function WhyChooseFromUs(){
     return(
         <Container maxWidth="xl" sx={{background:"#fff",padding:"120px"}} >
             <Box  >
-                <Typography textAlign={"center"} color={"#658C4A"} variant="h3" >Why Choose Us ?</Typography>
+                <Typography textAlign={"center"} color={(theme)=>theme.palette.primary.main} variant="h3" >Why Choose Us ?</Typography>
             </Box>
             <Grid container sx={{marginTop:"100px"}} >
                 {WHYUS.map(p=>( 

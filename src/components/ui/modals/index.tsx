@@ -52,7 +52,7 @@ export default function BasicModal({isOpen}:IProps) {
                 <Box margin={"auto"} >
                         <Typography variant='h5' textAlign={"center"} >Get 15% off</Typography>
                         <Typography mb={3} textAlign={"center"} mt={1}>on your initial purchase of our chosen products</Typography>
-                        <Button variant="text" sx={{borderRadius:"10px",color:"#658C4A"}} >
+                        <Button variant="text" sx={(theme)=>({borderRadius:"10px",color:theme.palette.primary.main})} >
                             <Typography>
                                 Buy Now
                             </Typography>

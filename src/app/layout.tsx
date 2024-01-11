@@ -24,7 +24,6 @@ export default function RootLayout({
       <ThemeContextProvider>
         <body>
           <section style={{position:"sticky",top:0, background:"#fff",zIndex:10}} >
-            {/* <div style={{width:"100%",height:"20px",background:"#658C4A"}} ></div> */}
           <HeadSection />
           <Product />
           </section>

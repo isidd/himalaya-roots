@@ -1,10 +1,11 @@
+import { QrCode2 } from "@mui/icons-material"
 import { Box } from "@mui/material"
 import styled, { keyframes } from "styled-components"
 
-const toolTipAnimation = keyframes`
- 0% { width: 60px;  }
- 5% { width: 320px; background : #658C4A;color:#fff; height : 95px;}
- 100% { width: 320px; background : #658C4A;color:#fff; height : 95px;}
+const toolTipAnimation = keyframes`$
+ 0% { width: 60px; right: 0px; }
+ 5% { width: 320px; background : #57843a; color:#fff; height : 95px;right: 0}
+ 100% { width: 320px; background : #57843a; color:#fff; height : 95px; right: 0}
 `
 
 const toolTipAnimation1 = keyframes`
@@ -25,16 +26,16 @@ export const StyledHomeBox = styled(Box)`
     height : 60px;
     z-index:200;
     position:fixed;
-    bottom:84px;
-    right:5px;
+    top:10px;
+    right:20px;
     alignItems:center;
+    color:#57843a;
     animation-name: ${toolTipAnimation1};
     animation-duration: 1s;
     animation-iteration-count: 10;
     &:hover {
         animation-name: ${toolTipAnimation};
         animation-duration: 20s;
-        right: 0;
         border-top-right-radius : 0;
         border-bottom-right-radius : 0;
     }

@@ -8,7 +8,7 @@ export default function ProductSuggestion(){
     return(
         <Box >
             <Box sx={{display:"flex",justifyContent:"space-around",background:"#fff",padding:"50px 0"}}>
-                <Box sx={{color:"#658C4A",alignSelf:"end"}}>
+                <Box sx={(theme)=>({color:theme.palette.primary.main,alignSelf:"end"})}>
                     <Typography variant="h3">Our</Typography>
                     <Typography variant="h3">Products</Typography>
                 </Box>
@@ -26,15 +26,15 @@ export default function ProductSuggestion(){
                         }}>
                    <Chip 
                         label={p} 
-                        sx={{
-                            background:"#658C4A",
+                        sx={(theme)=>({
+                            background:theme.palette.primary.main,
                             opacity:.7,
                             color:"white",
                             position:"relative",
                             top:"120px",
                             left:"5px",
                             cursor:"pointer"
-                            }} />
+                            })} />
                 </Box>
                 ))
                 }

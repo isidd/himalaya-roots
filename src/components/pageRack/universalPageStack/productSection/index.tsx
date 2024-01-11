@@ -37,7 +37,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" sx={{boxShadow:"none",background:"#658C4A",color:"black"}} >
+    <AppBar position="static" sx={(theme)=>({boxShadow:"none",background:theme.palette.primary.main,color:"black"})} >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Grid container sx={{display:{xs:'none',md:"flex"}}}>
@@ -47,7 +47,7 @@ function ResponsiveAppBar() {
                     PRODUCTS.map((p:any)=>(
                       <Grid item xs={2} key={p.name}>
                       <Typography 
-                          variant="caption" 
+                          variant="body1" 
                           sx={{cursor:"pointer",color:"#fff"}} 
                           onClick={()=>navigate.push(p.link)} 
                           >

@@ -102,11 +102,9 @@ export default function HeadSection() {
             />
           </FormControl>
         </Grid>
-        <Grid item md={1} sm={12} xs={12}></Grid>
-        <Grid item md={1} sm={12} xs={12} container  sx={{display:"flex",textAlign:"end"}}>
-            <Grid md={6} item><PersonOutlinedIcon sx={{color:"grey"}} height="300px" /></Grid>
-            <Grid md={6} item><LocalMallOutlinedIcon sx={{color:"grey"}} /></Grid>
-          
+        <Grid item md={2} sm={12} xs={12} container  sx={{display:"flex",textAlign:"end"}}>
+            <Grid md={6} item textAlign={"center"} ><PersonOutlinedIcon sx={{color:"grey"}} height="300px" /></Grid>
+            <Grid md={6} item textAlign={"left"} ><LocalMallOutlinedIcon sx={{color:"grey"}} /></Grid>
         </Grid>
       </Grid>
   );

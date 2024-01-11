@@ -18,13 +18,13 @@ export default function QrToolTip(){
                     onClick={()=>setOnAuth(old=>!old)}
                     textAlign={'center'}>
                     <Box>
-                    <QrCode2 sx={{
+                    <QrCode2 sx={(theme)=>({
                         width:"60px",
                         height:"60px",
                         borderRadius:"5px",
                         cursor:"pointer",
                         marginTop:"2px",
-                        }}/>
+                        })}/>
                     </Box>
                     <Box >
                         <Typography textAlign={"center"} color={"#fff"} > 

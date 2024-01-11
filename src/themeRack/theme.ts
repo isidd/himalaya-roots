@@ -6,6 +6,9 @@ export const lightTheme: Theme = createTheme({
     background: {
       default: "#f5f5f5",
     },
+    primary :{
+      main:"#57843a"
+    }
   },
   typography: {
     fontFamily: [

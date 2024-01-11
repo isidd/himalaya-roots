@@ -33,7 +33,7 @@ export default function JoinUs(){
                             InputProps={{
                                 endAdornment: (
                                 <InputAdornment position="end">
-                                    <Button sx={{borderRadius:"30px",color:"#fff",background:"#658c4a",position:"absolute",marginLeft:"-71px",marginTop:"-1px"}} variant="contained" >
+                                    <Button sx={(theme)=>({borderRadius:"30px",color:"#fff",background:theme.palette.primary.main,position:"absolute",marginLeft:"-71px",marginTop:"-1px"})} variant="contained" >
                                         Join Us
                                     </Button>
                                 </InputAdornment>

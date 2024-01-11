@@ -6,7 +6,7 @@ import honey from "@/assets/pictures/honey2.jpg"
 export default function NewArrival(){
     return(
         <Container maxWidth="xl" sx={{background:"#fff",padding:"80px"}} >
-            <Box sx={{padding:"0 50px",color:"#658C4A"}}>
+            <Box sx={(props)=>({padding:"0 50px",color:props.palette.primary.main})}>
                 <Typography variant="h3" > New Arrival</Typography>
                 <Typography variant="body2" color={"gray"} > Be the first to have the class product</Typography>
             </Box>
@@ -25,15 +25,15 @@ export default function NewArrival(){
                             }}>
                         <Chip 
                             label={"product"} 
-                            sx={{
-                                background:"#658C4A",
+                            sx={(props)=>({
+                                background:props.palette.primary.main,
                                 opacity:.7,
                                 color:"white",
                                 position:"relative",
                                 top:"190px",
                                 left:"5px",
                                 cursor:"pointer"
-                                }} 
+                                })} 
                                 />
                     </Box>
                     <Box sx={{marginTop:"10px"}} >
@@ -48,7 +48,7 @@ export default function NewArrival(){
                 </Grid>
                 ))}
                     <Grid container sx={{marginTop:"40px",justifyContent:"center"}} >
-                        <Button variant="outlined" sx={{background:"#658C4A",color:"white",borderRadius:"40px"}} >
+                        <Button variant="contained" sx={(theme)=>({background:theme.palette.primary.main,color:"white",borderRadius:"40px"})} >
                             <Typography variant="body2" textAlign={"center"} >
                                 See More
                             </Typography>

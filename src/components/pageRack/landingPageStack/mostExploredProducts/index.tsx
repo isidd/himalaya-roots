@@ -4,7 +4,7 @@ import honey from "@/assets/pictures/honey4.jpeg"
 
 export default function MostExploredProducts(){
     return(
-        <Container maxWidth="xl" sx={{background:"#658C4A", marginTop:"60px",padding:"50px 0",color:"#fff"}} >
+        <Container maxWidth="xl" sx={(theme)=>({background:theme.palette.primary.main, marginTop:"60px",padding:"50px 0",color:"#fff"})} >
             <Box>
                     <Typography textAlign={"center"} variant="h3">
                             Our Most Explored Products
@@ -30,15 +30,15 @@ export default function MostExploredProducts(){
                             }}>
                         <Chip 
                             label={"product"} 
-                            sx={{
-                                background:"#658C4A",
+                            sx={(theme)=>({
+                                background:theme.palette.primary.main,
                                 opacity:.7,
                                 color:"white",
                                 position:"relative",
                                 top:"190px",
                                 left:"5px",
                                 cursor:"pointer"
-                                }} 
+                                })} 
                                 />
                     </Box>
                     <Box sx={{marginTop:"10px"}} >
