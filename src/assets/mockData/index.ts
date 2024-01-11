@@ -1,0 +1,8 @@
+export const PRODUCTS = [
+    {name:"Home",link:"/"},
+    {name:"Dairy",link:"/diary"},
+    {name:"Pulses",link:"/pulses"},
+    {name:"Herbs",link:"/herbs"},
+    {name:"Toiletries",link:"/toiletries"},
+    {name:"Explore..",link:"/others"}
+]
