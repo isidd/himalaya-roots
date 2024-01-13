@@ -1,4 +1,3 @@
-import { QrCode2 } from "@mui/icons-material"
 import { Box } from "@mui/material"
 import styled, { keyframes } from "styled-components"
 

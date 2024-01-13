@@ -37,7 +37,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" sx={(theme)=>({boxShadow:"none",background:theme.palette.primary.main,color:"black"})} >
+    <AppBar position="static" sx={(theme)=>({boxShadow:"0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, .5)",background:theme.palette.primary.main,color:"black"})} >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Grid container sx={{display:{xs:'none',md:"flex"}}}>

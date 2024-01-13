@@ -1,10 +1,18 @@
 import { Chip, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import honey from "@/assets/pictures/honey4.jpeg"
+import { useRouter } from "next/navigation";
 
 
 export default function ProductSuggestion(){
     // cornflowerblue
+
+    const router = useRouter()
+
+    const goToProduct = ()=>{
+        router.push('/product-details')
+    }
+
     return(
         <Box >
             <Box sx={{display:"flex",justifyContent:"space-around",background:"#fff",padding:"50px 0"}}>
@@ -22,9 +30,11 @@ export default function ProductSuggestion(){
                         backgroundImage : `url(${honey.src})`,
                         backgroundRepeat:"no-repeat",
                         backgroundSize : "cover", 
-                        borderRadius:"10px"
+                        borderRadius:"10px",
+                        boxShadow:"0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, .5)"
                         }}>
                    <Chip 
+                        onClick={()=>goToProduct()}
                         label={p} 
                         sx={(theme)=>({
                             background:theme.palette.primary.main,

@@ -25,15 +25,16 @@ export default function ProductList(){
             </Grid>
             </Box>
         <Box sx={{marginTop:"40px"}}>
-            <Button variant="contained" sx={{background:"#658C4A", borderRadius:"30px" }}>explore the story... </Button>
+            <Button variant="contained" sx={(theme)=>({background:theme.palette.primary.main, borderRadius:"30px" })}>explore the story... </Button>
         </Box>
         </Grid>
-        <Grid item md={6} sm={12} xs={12}>
+        <Grid item md={6} sm={12} xs={12} >
             <Box sx={{
                 backgroundImage : `url(${honey.src})`,
                 height: '400px',
                 backgroundRepeat:"no-repeat",
                 backgroundSize : "cover",
+                
             }} ></Box>
         </Grid>
       </Grid>

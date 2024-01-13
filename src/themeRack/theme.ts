@@ -8,6 +8,9 @@ export const lightTheme: Theme = createTheme({
     },
     primary :{
       main:"#57843a"
+    },
+    secondary:{
+      main:"#e1bc9e"
     }
   },
   typography: {
