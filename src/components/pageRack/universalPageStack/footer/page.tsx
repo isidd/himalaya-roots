@@ -8,7 +8,7 @@ export default function Footer(){
         <Container maxWidth="xl" sx={{padding:"50px",}} >
                     <Box>
                         <Typography textAlign={"center"} >
-                            © 2023 Himalayan Honey. All Rights Reserved.
+                            © 2023 Himalayan Roots. All Rights Reserved.
                         </Typography>
                     </Box>
         </Container>
