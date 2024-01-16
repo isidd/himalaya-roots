@@ -1,11 +1,8 @@
-import HorizontalLinearStepper from "@/components/ui/stepper"
-import { Container } from "@mui/material"
 
+import HorizontalLinearStepper from "@/components/ui/stepper"
 
 export default function Bucket(){
-    
-    return <Container sx={{marginTop:"20px"}} maxWidth="xl" >
-    <HorizontalLinearStepper />
-        Bucket
-    </Container>
+    return <>
+        <HorizontalLinearStepper />
+    </>
 }
