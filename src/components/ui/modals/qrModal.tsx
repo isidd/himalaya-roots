@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { Button, Typography, Modal, Grid, Box } from '@mui/material';
-import modalPicture from "@/assets/pictures/honey4.jpeg"
+import { Typography, Modal, Grid } from '@mui/material';
 import { QrReader } from 'react-qr-reader';
 import { QrCode2Outlined } from '@mui/icons-material';
 import { useRouter } from 'next/navigation';

@@ -167,7 +167,7 @@ const [value, setValue] = React.useState(0);
                                     <Typography variant="h6" mb={1} >
                                         Delivery and Service Estimate
                                     </Typography>
-                                    <LocalShippingTwoTone sx={{width:"30px",height:"30px",color:"#E7CEC0",marginLeft:"10px"}} />
+                                    <LocalShippingTwoTone sx={{width:"30px",height:"30px",color:"#e6aa89",marginLeft:"10px"}} />
                                 </Box>
                                 <FormControl >
                                     <TextField

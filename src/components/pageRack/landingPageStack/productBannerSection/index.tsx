@@ -3,15 +3,16 @@ import { Box, Button,Grid, Typography } from "@mui/material"
 import honey from "@/assets/pictures/honey2.jpg";
 import Carousel from "react-material-ui-carousel";
 import { StyleSpan } from "./style";
+import EmojiNatureIcon from '@mui/icons-material/EmojiNature';
 
 
 export default function ProductList(){
     const Arrays = Array.from({length:3},(_,i)=><Grid key={i+1} container sx={{ p: 0, display:"flex", alignItems:"center"}}>
         <Grid item md={6} sm={12} xs={12} sx={{textAlign:"center",marginTop:"60px"}} >
           <Box> <Typography variant="h3">Himalayan Honey</Typography></Box>
-          <StyleSpan>
-            🐝
-          </StyleSpan>
+          <span>
+            <EmojiNatureIcon sx={{width:"40px",height:"40px",color:"#e6aa89"}}  />
+          </span>
          <Box> <Typography variant="h5">Directly from the hives</Typography></Box>
          <Box> 
             <Grid container>
