@@ -1,7 +1,6 @@
 import HorizontalLinearStepper from "@/components/ui/stepper"
 import { Container } from "@mui/material"
 
-HorizontalLinearStepper
 
 export default function Bucket(){
     
