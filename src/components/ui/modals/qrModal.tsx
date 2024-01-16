@@ -55,7 +55,7 @@ export default function QRModal({isOpen, setOnAuth}:IProps) {
                             setOpen(false)
                             setTimeout(()=>{
                                 window.location.reload()
-                            },500)
+                            },1000)
                             navigator.push(result.text);
                             setOnAuth(false);
                         }
