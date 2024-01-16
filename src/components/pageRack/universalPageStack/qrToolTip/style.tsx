@@ -25,7 +25,7 @@ export const StyledHomeBox = styled(Box)`
     height : 60px;
     z-index:200;
     position:fixed;
-    top:10px;
+    top:22px;
     right:20px;
     alignItems:center;
     color:#57843a;

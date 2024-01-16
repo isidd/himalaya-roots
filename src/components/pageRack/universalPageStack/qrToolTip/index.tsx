@@ -4,6 +4,7 @@ import { QrCode2 } from "@mui/icons-material"
 import { Box, Typography } from "@mui/material"
 import { useState } from "react"
 import { StyledHomeBox } from "./style"
+import QRModal from "@/components/ui/modals/qrModal"
 
 
 
@@ -13,7 +14,7 @@ export default function QrToolTip(){
 
         return(
             <>
-                <BasicModal isOpen={checkAuth} />
+                {checkAuth && <QRModal isOpen={checkAuth} setOnAuth={setOnAuth} />}
                 <StyledHomeBox 
                     onClick={()=>setOnAuth(old=>!old)}
                     textAlign={'center'}>

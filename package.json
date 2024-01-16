@@ -15,10 +15,12 @@
     "@mui/material": "^5.15.2",
     "@mui/styled-engine-sc": "^6.0.0-alpha.10",
     "@mui/system": "^5.15.2",
+    "html5-qrcode": "^2.3.8",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
     "react-material-ui-carousel": "^3.4.2",
+    "react-qr-reader": "^3.0.0-beta-1",
     "styled-components": "^6.1.6"
   },
   "devDependencies": {

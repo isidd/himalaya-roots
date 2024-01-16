@@ -1,5 +1,6 @@
 "use client";
 import {
+  Badge,
   FormControl,
   Grid,
   InputAdornment,
@@ -15,7 +16,8 @@ import styled, { keyframes } from "styled-components";
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
 import Image from 'next/image';
-import logo from "@/assets/pictures/logo.svg";
+import logo from "@/assets/pictures/himalayaRoots.png";
+import { useRouter } from "next/navigation";
 
 
 const StyleTEXT = styled(TextField)`
@@ -53,6 +55,7 @@ const StyledSearchIcon = styled(SearchIcon)`
 export default function HeadSection() {
 
   const [showClearIcon, setShowClearIcon] = useState("none");
+  const navigator = useRouter()
 
   return (
       // <Grid container sx={{ p: 2, display:{xs:"none",md:"flex"}, alignItems:"center"}} >
@@ -63,8 +66,9 @@ export default function HeadSection() {
             priority
             src={logo}
             alt="Follow us on Twitter"
-            height={50}
-            width={100}
+            height={70}
+            style={{width:"95%",cursor:"pointer"}}
+            onClick={()=>navigator.push("/")}
           />
           {/* </Typography> */}
         </Grid>
@@ -97,14 +101,18 @@ export default function HeadSection() {
                 ),
                 style: {
                   borderRadius: "100px",
-                },
+                }, 
               }}
             />
           </FormControl>
         </Grid>
         <Grid item md={2} sm={12} xs={12} container  sx={{display:"flex",textAlign:"end"}}>
             <Grid md={6} item textAlign={"center"} ><PersonOutlinedIcon sx={{color:"grey"}} height="300px" /></Grid>
-            <Grid md={6} item textAlign={"left"} ><LocalMallOutlinedIcon sx={{color:"grey"}} /></Grid>
+            <Grid md={6} item textAlign={"left"} >
+              <Badge onClick={()=>navigator.push("/bucket")} sx={{cursor:"pointer"}} badgeContent={4} color="primary">
+                <LocalMallOutlinedIcon sx={{color:"grey"}} />
+              </Badge>
+              </Grid>
         </Grid>
       </Grid>
   );
