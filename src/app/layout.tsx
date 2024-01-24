@@ -6,6 +6,8 @@ import HeadSection from "@/components/pageRack/universalPageStack/headSection/he
 import Product from "@/components/pageRack/universalPageStack/productSection";
 import Footer from "@/components/pageRack/universalPageStack/footer/page";
 import QrToolTip from "@/components/pageRack/universalPageStack/qrToolTip";
+import { Suspense } from "react";
+import { Container } from "@mui/material";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,7 +29,9 @@ export default function RootLayout({
           <HeadSection />
           <Product />
           </section>
+          {/* <Suspense fallback={<Container sx={{display:"flex",justifyContent:"center",margin:"auto",height:"100px"}}>Loading...</Container>} > */}
           {children}
+          {/* </Suspense> */}
           <QrToolTip />
         <Footer/>
         </body>

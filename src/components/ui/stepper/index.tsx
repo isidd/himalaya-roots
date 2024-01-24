@@ -9,9 +9,15 @@ import Typography from '@mui/material/Typography';
 
 const steps = ['Bucket', 'Address', 'Payment'];
 
-export default function HorizontalLinearStepper() {
-  const [activeStep, setActiveStep] = React.useState(0);
-  const [skipped, setSkipped] = React.useState(new Set<number>());
+interface IProps {
+  activeStep : number,
+  setActiveStep : ()=>void,
+  skipped : number ,
+  setSkipped : ()=>void
+}
+
+export default function HorizontalLinearStepper({activeStep,setActiveStep,skipped,setSkipped}:any) {
+
 
   const isStepOptional = (step: number) => {
     return step === 10;
@@ -28,12 +34,12 @@ export default function HorizontalLinearStepper() {
       newSkipped.delete(activeStep);
     }
 
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+    setActiveStep((prevActiveStep:any) => prevActiveStep + 1);
     setSkipped(newSkipped);
   };
 
   const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+    setActiveStep((prevActiveStep:any) => prevActiveStep - 1);
   };
 
   const handleSkip = () => {
@@ -43,8 +49,8 @@ export default function HorizontalLinearStepper() {
       throw new Error("You can't skip a step that isn't optional.");
     }
 
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    setSkipped((prevSkipped) => {
+    setActiveStep((prevActiveStep:any) => prevActiveStep + 1);
+    setSkipped((prevSkipped:any) => {
       const newSkipped = new Set(prevSkipped.values());
       newSkipped.add(activeStep);
       return newSkipped;
@@ -56,7 +62,7 @@ export default function HorizontalLinearStepper() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ width: '100%',mt:3 }}>
       <Stepper alternativeLabel activeStep={activeStep}>
         {steps.map((label, index) => {
           const stepProps: { completed?: boolean } = {};
@@ -91,7 +97,7 @@ export default function HorizontalLinearStepper() {
       ) : (
         <React.Fragment>
           {/* <Typography sx={{ mt: 2, mb: 1 }}>Step {activeStep + 1}</Typography> */}
-          <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
+          {/* <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
             <Button
               color="inherit"
               disabled={activeStep === 0}
@@ -109,7 +115,7 @@ export default function HorizontalLinearStepper() {
             <Button onClick={handleNext}>
               {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
             </Button>
-          </Box>
+          </Box> */}
         </React.Fragment>
       )}
     </Box>

@@ -106,7 +106,7 @@ const [value, setValue] = React.useState(0);
                                             cursor:"pointer"})}
                                             />
                             </Box>
-                            {/* <Box mt={1} display={"flex"} justifyContent={"space-between"} width={"50%"} >
+                            <Box mt={1} display={"flex"} justifyContent={"space-between"} width={"50%"} >
                                 <Box>
                                     <AcUnitTwoToneIcon sx={(theme)=>({height:"40px",width:"40px",color:"gray"})} />
                                 </Box>
@@ -120,7 +120,7 @@ const [value, setValue] = React.useState(0);
                                     <SpaTwoToneIcon sx={(theme)=>({height:"40px",width:"40px",color:"gray"})} />
                                 </Box>
 
-                            </Box> */}
+                            </Box>
                             {/* <Divider component="div" role="presentation"> */}
                             {/* <Typography  ></Typography> */}
                             <Box mt={2} onClick={()=>window.scrollTo({ top: 950, behavior: "smooth" })} sx={{cursor:"pointer"}} >

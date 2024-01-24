@@ -5,9 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { Grid } from '@mui/material';
-import {PRODUCTS} from "@/assets/mockData"
 import { useRouter } from "next/navigation";
-import { useTheme } from '@mui/material/styles';
 
 
 function ResponsiveAppBar() {
@@ -36,6 +34,14 @@ function ResponsiveAppBar() {
     setAnchorElUser(null);
   };
 
+  const [ProductsList,setProductList] = React.useState([])
+
+  React.useEffect(()=>{
+      fetch("/api/productList").then(r=>r.json()).then((res:any)=>{
+        setProductList(res)
+      })
+  },[])
+
   return (
     <AppBar position="static" sx={(theme)=>({boxShadow:"0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, .5)",background:theme.palette.primary.main,color:"black"})} >
       <Container maxWidth="xl">
@@ -44,7 +50,7 @@ function ResponsiveAppBar() {
                 <Grid md={2} item ></Grid>
                 <Grid md={8} item container >
                   {
-                    PRODUCTS.map((p:any)=>(
+                    ProductsList.map((p:any)=>(
                       <Grid item xs={2} key={p.name}>
                       <Typography 
                           variant="body1" 
