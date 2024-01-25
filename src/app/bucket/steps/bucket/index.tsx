@@ -140,7 +140,7 @@ export default function Bucket({setActiveStep}:IProps){
                     <Grid container mt={4} > 
                         <Grid item xs={2}></Grid>
                         <Grid item xs={8}>
-                            <Button sx={{width:"100%"}} variant="contained" onClick={()=>setActiveStep((old:any)=>old+1)} >
+                            <Button sx={{width:"100%"}} variant="contained" onClick={()=>setActiveStep(true)} >
                                 <Typography> Place Order</Typography>
                             </Button>
                         </Grid>
