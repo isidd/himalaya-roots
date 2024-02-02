@@ -16,26 +16,26 @@ const LANDING_PAGE_STACK = [
         stackOrder: 5,
         name : ProductSuggestion
     },
-    {
-        stackOrder: 4,
-        name : MostExploredProducts
-    },
-    {
-        stackOrder: 3,
-        name : NewArrival
-    },
-    {
-        stackOrder: 2,
-        name : Philosophy
-    },
-    {
-        stackOrder: 1,
-        name : WhyChooseFromUs
-    },
-    {
-        stackOrder: 0,
-        name : JoinUs
-    },
+    // {
+    //     stackOrder: 4,
+    //     name : MostExploredProducts
+    // },
+    // {
+    //     stackOrder: 3,
+    //     name : NewArrival
+    // },
+    // {
+    //     stackOrder: 2,
+    //     name : Philosophy
+    // },
+    // {
+    //     stackOrder: 1,
+    //     name : WhyChooseFromUs
+    // },
+    // {
+    //     stackOrder: 0,
+    //     name : JoinUs
+    // },
 ]
 
 export function LandingPageStack(){

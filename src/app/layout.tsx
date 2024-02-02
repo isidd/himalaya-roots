@@ -25,15 +25,13 @@ export default function RootLayout({
     <html lang="en">
       <ThemeContextProvider>
         <body>
-          <section style={{position:"sticky",top:0, background:"#fff",zIndex:10}} >
+          <section style={{position:"sticky",zIndex:10,background:"#fff"}} >
           <HeadSection />
           <Product />
-          </section>
-          {/* <Suspense fallback={<Container sx={{display:"flex",justifyContent:"center",margin:"auto",height:"100px"}}>Loading...</Container>} > */}
-          {children}
-          {/* </Suspense> */}
-          <QrToolTip />
-        <Footer/>
+            </section>
+            {children}
+          {/* <QrToolTip /> */}
+        {/* <Footer/> */}
         </body>
       </ThemeContextProvider>
     </html>

@@ -43,7 +43,7 @@ export default function ProductList(){
 
 
     return (
-        <Carousel sx={{background:"white" ,height:"370px",paddingTop:"1px" }} IndicatorIcon={''} animation="slide" duration={3000} interval={8000} navButtonsAlwaysVisible={false }>
+        <Carousel sx={{background:"white" ,height:{xs:"650px",md:"370px"},paddingTop:"1px" }} IndicatorIcon={''} animation="slide" duration={3000} interval={8000} navButtonsAlwaysVisible={false }>
             {Arrays}
         </Carousel>
   );

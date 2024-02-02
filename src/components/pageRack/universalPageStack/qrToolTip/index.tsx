@@ -24,7 +24,6 @@ export default function QrToolTip(){
                         height:"60px",
                         borderRadius:"5px",
                         cursor:"pointer",
-                        marginTop:"2px",
                         })}/>
                     </Box>
                     <Box >
