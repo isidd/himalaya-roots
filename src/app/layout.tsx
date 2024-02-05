@@ -31,7 +31,7 @@ export default function RootLayout({
             </section>
             {children}
           {/* <QrToolTip /> */}
-        {/* <Footer/> */}
+        <Footer/>
         </body>
       </ThemeContextProvider>
     </html>
