@@ -5,8 +5,6 @@ import { useRouter } from "next/navigation";
 
 
 export default function ProductSuggestion(){
-    // cornflowerblue
-
     const router = useRouter()
 
     const goToProduct = ()=>{
@@ -15,7 +13,7 @@ export default function ProductSuggestion(){
 
     return(
         <Box >
-            <Grid container sx={{display:"flex",justifyContent:"space-around",background:"#fff",padding:"50px 0",textAlign:"center"}}>
+            <Grid container sx={{background:"#fff",padding:"50px 0",textAlign:"center"}}>
                 <Grid md={2} xs={12} item alignSelf={"end"} >
                 <Box sx={(theme)=>({color:theme.palette.primary.main,alignSelf:"end",textAlign:'left',ml:3})}>
                     <Typography variant="h3">Our </Typography>
@@ -23,7 +21,7 @@ export default function ProductSuggestion(){
                 </Box>
                 </Grid>
                 <Grid md={10} xs={12} item container>
-                    {Array.from({length:4},(_,i)=>`This is Product ${i+1}`).map((p,index)=>(
+                    {Array.from({length:4},(_,i)=>`Product \n ${i+1}`).map((p,index)=>(
                     <Grid key={Math.random()*1000} p={1} md={3} xs={6} item sx={{display:"flex", justifyContent:'center'}} >
                         <Box 
                             sx={{
@@ -45,7 +43,7 @@ export default function ProductSuggestion(){
                                     color:"white",
                                     position:"relative",
                                     top:"160px",
-                                    left:"60px",
+                                    right:{xs : "40px" ,md:"70px"},
                                     cursor:"pointer"
                                     }
                                 )} />
