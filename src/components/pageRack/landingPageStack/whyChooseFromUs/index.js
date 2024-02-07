@@ -34,22 +34,22 @@ export default function WhyChooseFromUs(){
     ]
 
     return(
-        <Container maxWidth="xl" sx={{background:"#fff",padding:"120px"}} >
+        <Container maxWidth="xl" sx={{background:"#fff",padding:{md:"20px",xs:'10px'}, marginTop:"50px"}} >
             <Box  >
                 <Typography textAlign={"center"} color={(theme)=>theme.palette.primary.main} variant="h3" >Why Choose Us ?</Typography>
             </Box>
-            <Grid container sx={{marginTop:"100px"}} >
+            <Grid container sx={{marginTop:{md:"80px",xs:"30px"}}} >
                 {WHYUS.map(p=>( 
-                <Grid item key={Math.random()*1000} xs={3} sx={{display:"flex",flexDirection:"column",alignItems:"center"}} > 
+                <Grid mt={2} item key={Math.random()*1000} md={3} xs={6} sx={{display:"flex",flexDirection:"column",alignItems:"center"}} > 
                     <Image
                         src={p.img}
                         alt="pic"
                     />
                     <Box sx={{marginTop:"10px"}} >
-                        <Typography variant="h6" textAlign={"left"} > {p.heading} </Typography>
+                        <Typography variant="h6" sx={{textAlign :{ md:"left" ,xs:"center"}}} > {p.heading} </Typography>
                     </Box> 
-                    <Box >
-                        <Typography variant="body2" textAlign={"left"} color={"gray"} > {p.title} </Typography>
+                    <Box p={1} >
+                        <Typography variant="body2" sx={{textAlign :{ md:"left" ,xs:"center"}}} color={"gray"} > {p.title} </Typography>
                     </Box> 
                 </Grid>
                 ))}

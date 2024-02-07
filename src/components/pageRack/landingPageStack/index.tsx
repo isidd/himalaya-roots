@@ -28,14 +28,14 @@ const LANDING_PAGE_STACK = [
         stackOrder: 2,
         name : Philosophy
     },
-    // {
-    //     stackOrder: 1,
-    //     name : WhyChooseFromUs
-    // },
-    // {
-    //     stackOrder: 0,
-    //     name : JoinUs
-    // },
+    {
+        stackOrder: 1,
+        name : WhyChooseFromUs
+    },
+    {
+        stackOrder: 0,
+        name : JoinUs
+    },
 ]
 
 export function LandingPageStack(){
